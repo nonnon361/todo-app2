@@ -33,3 +33,27 @@ input.addEventListener("keypress", (e) => {
     button.click();
   }saveTasks();
 });
+function loadTasks() {
+  const data = JSON.parse(localStorage.getItem("tasks")) || [];
+
+  data.forEach(text => {
+    const li = document.createElement("li");
+    li.textContent = text;
+
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "X";
+
+    delBtn.addEventListener("click", () => {
+      li.remove();
+      saveTasks();
+    });
+
+    li.appendChild(delBtn);
+
+    li.addEventListener("click", () => {
+      li.style.textDecoration = "line-through";
+    });
+
+    document.getElementById("taskList").appendChild(li);
+  });
+}
