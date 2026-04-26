@@ -49,3 +49,10 @@ div {
 .dragging {
   opacity: 0.5;
 }
+li {
+  transition: all 0.2s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
