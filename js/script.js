@@ -48,7 +48,7 @@ input.addEventListener("keypress", (e) => {
   }saveTasks();
 });
 function loadTasks() {
-  const data = JSON.parse(localStorage.getItem("tasks")) || [];
+  const data = loadTasks();
     const li = createTask(item.text, item.done);
 data.forEach(item => {
   const li = document.createElement("li");
