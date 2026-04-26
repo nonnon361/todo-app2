@@ -21,10 +21,11 @@ const list = document.getElementById("taskList");
 button.addEventListener("click", () => {
   if (input.value === "") return;
 
-  const li = document.createElement("li");
-  li.textContent = input.value;
-  li.addEventListener("click", () => {
-  li.classList.toggle("done");
+  const li = createTask(input.value);
+
+  list.appendChild(li);
+
+  input.value = "";
   saveTasks();
 });
 
