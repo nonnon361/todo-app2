@@ -2,3 +2,11 @@
   font-family: Arial;
   padding: 20px;
 }
+li {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button {
+  margin-left: 10px;
+}
