@@ -67,3 +67,14 @@ const darkBtn = document.getElementById("darkBtn");
 darkBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 });
+function filterTasks(type) {
+  document.querySelectorAll("li").forEach(li => {
+    if (type === "all") {
+      li.style.display = "block";
+    } else if (type === "active") {
+      li.style.display = li.classList.contains("done") ? "none" : "block";
+    } else if (type === "done") {
+      li.style.display = li.classList.contains("done") ? "block" : "none";
+    }
+  });
+}
