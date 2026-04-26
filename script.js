@@ -6,6 +6,9 @@ function saveTasks() {
       text: li.childNodes[0].textContent,
       done: li.classList.contains("done")
       li.setAttribute("draggable", "true");
+      li.addEventListener("dragstart", () => {
+  li.classList.add("dragging");
+});
     });
   });
 
