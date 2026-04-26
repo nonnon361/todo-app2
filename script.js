@@ -59,9 +59,12 @@ data.forEach(item => {
 
     li.appendChild(delBtn);
 
-    li.addEventListener("click", () => {
-  li.classList.toggle("done");
-  saveTasks();
+    li.addEventListener("dblclick", () => {
+  const newText = prompt("Edit task:", li.childNodes[0].textContent);
+  if (newText) {
+    li.childNodes[0].textContent = newText;
+    saveTasks();
+  }
 });
     document.getElementById("taskList").appendChild(li);
   });
