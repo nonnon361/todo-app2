@@ -1,3 +1,12 @@
+function saveTasks() {
+  const items = [];
+
+  document.querySelectorAll("li").forEach(li => {
+    items.push(li.textContent.replace("X", "").trim());
+  });
+
+  localStorage.setItem("tasks", JSON.stringify(items));
+}
 const input = document.getElementById("taskInput");
 const button = document.getElementById("addBtn");
 const list = document.getElementById("taskList");
