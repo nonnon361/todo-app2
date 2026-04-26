@@ -50,7 +50,7 @@ input.addEventListener("keypress", (e) => {
 });
 function loadTasks() {
   const data = loadTasks();
-    const li = createTask(item.text, item.done);
+    const li = createTask(item.text, item.done, saveTasks, list);
 data.forEach(item => {
   const li = document.createElement("li");
   li.textContent = item.text;
