@@ -10,3 +10,7 @@ li {
 button {
   margin-left: 10px;
 }
+.container {
+  max-width: 400px;
+  margin: auto;
+}
