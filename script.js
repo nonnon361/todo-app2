@@ -18,3 +18,8 @@ button.addEventListener("click", () => {
 delBtn.addEventListener("click", () => {
   li.remove();
 });
+input.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    button.click();
+  }
+});
