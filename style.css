@@ -39,3 +39,10 @@ button {
   background: #ddd;
   border-radius: 5px;
 }
+h1 {
+  text-align: center;
+}
+
+div {
+  margin-bottom: 10px;
+}
