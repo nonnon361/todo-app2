@@ -30,5 +30,5 @@ delBtn.addEventListener("click", () => {
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     button.click();
-  }
+  }saveTasks();
 });
