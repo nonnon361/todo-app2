@@ -1,3 +1,4 @@
+import { saveTasks, loadTasks } from "./storage.js";
 function saveTasks() {
   const items = [];
 
