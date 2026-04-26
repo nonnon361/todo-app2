@@ -5,6 +5,7 @@ function saveTasks() {
     items.push({
       text: li.childNodes[0].textContent,
       done: li.classList.contains("done")
+      li.setAttribute("draggable", "true");
     });
   });
 
