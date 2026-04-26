@@ -97,3 +97,15 @@ document.getElementById("doneBtn").onclick = () => filterTasks("done");
 function getDragging() {
   return document.querySelector(".dragging");
 }
+list.addEventListener("dragover", (e) => {
+  e.preventDefault();
+
+  const dragging = getDragging();
+  const afterElement = getAfterElement(e.clientY);
+
+  if (afterElement == null) {
+    list.appendChild(dragging);
+  } else {
+    list.insertBefore(dragging, afterElement);
+  }
+});
