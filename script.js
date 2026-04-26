@@ -94,3 +94,6 @@ function filterTasks(type) {
 document.getElementById("allBtn").onclick = () => filterTasks("all");
 document.getElementById("activeBtn").onclick = () => filterTasks("active");
 document.getElementById("doneBtn").onclick = () => filterTasks("done");
+function getDragging() {
+  return document.querySelector(".dragging");
+}
