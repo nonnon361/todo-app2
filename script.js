@@ -43,9 +43,11 @@ input.addEventListener("keypress", (e) => {
 function loadTasks() {
   const data = JSON.parse(localStorage.getItem("tasks")) || [];
 
-  data.forEach(text => {
-    const li = document.createElement("li");
-    li.textContent = text;
+data.forEach(item => {
+  const li = document.createElement("li");
+  li.textContent = item.text;
+
+  if (item.done) li.classList.add("done");
 
     const delBtn = document.createElement("button");
     delBtn.textContent = "X";
