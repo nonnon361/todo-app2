@@ -1,5 +1,5 @@
 import { saveTasks, loadTasks } from "./storage.js";
-function saveTasks() {
+function saveTasks(list);
   const items = [];
 
   document.querySelectorAll("li").forEach(li => {
@@ -9,7 +9,7 @@ function saveTasks() {
       li.setAttribute("draggable", "true");
       li.addEventListener("dragend", () => {
   li.classList.remove("dragging");
-  saveTasks();
+  saveTasks(list);
 });
     });
   });
@@ -27,7 +27,7 @@ button.addEventListener("click", () => {
   list.appendChild(li);
 
   input.value = "";
-  saveTasks();
+  saveTasks(list);
 });
 
   const delBtn = document.createElement("button");
@@ -40,12 +40,12 @@ button.addEventListener("click", () => {
 });
 delBtn.addEventListener("click", () => {
   li.remove();
-  saveTasks();
+  saveTasks(list);
 });
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     button.click();
-  }saveTasks();
+  }saveTasks(list);
 });
 function loadTasks() {
   const data = loadTasks();
@@ -61,7 +61,7 @@ data.forEach(item => {
 
     delBtn.addEventListener("click", () => {
       li.remove();
-      saveTasks();
+      saveTasks(list);
     });
 
     li.appendChild(delBtn);
@@ -70,7 +70,7 @@ data.forEach(item => {
   const newText = prompt("Edit task:", li.childNodes[0].textContent);
   if (newText) {
     li.childNodes[0].textContent = newText;
-    saveTasks();
+    saveTasks(list);
   }
 });
     document.getElementById("taskList").appendChild(li);
@@ -135,7 +135,7 @@ function createTask(text, done = false) {
 
   li.addEventListener("click", () => {
     li.classList.toggle("done");
-    saveTasks();
+    saveTasks(list);
   });
 
   const delBtn = document.createElement("button");
@@ -143,7 +143,7 @@ function createTask(text, done = false) {
 
   delBtn.addEventListener("click", () => {
     li.remove();
-    saveTasks();
+    saveTasks(list);
   });
 
   li.appendChild(delBtn);
@@ -154,7 +154,7 @@ function createTask(text, done = false) {
 
   li.addEventListener("dragend", () => {
     li.classList.remove("dragging");
-    saveTasks();
+    saveTasks(list);
   });
 
   return li;
