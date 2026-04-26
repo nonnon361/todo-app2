@@ -15,6 +15,10 @@ button.addEventListener("click", () => {
 
   const li = document.createElement("li");
   li.textContent = input.value;
+  li.addEventListener("click", () => {
+  li.classList.toggle("done");
+  saveTasks();
+});
 
   const delBtn = document.createElement("button");
   delBtn.textContent = "X";
@@ -51,9 +55,9 @@ function loadTasks() {
     li.appendChild(delBtn);
 
     li.addEventListener("click", () => {
-      li.style.textDecoration = "line-through";
-    });
-
+  li.classList.toggle("done");
+  saveTasks();
+});
     document.getElementById("taskList").appendChild(li);
   });
 }
