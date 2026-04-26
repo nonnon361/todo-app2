@@ -26,6 +26,7 @@ button.addEventListener("click", () => {
 });
 delBtn.addEventListener("click", () => {
   li.remove();
+  saveTasks();
 });
 input.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
