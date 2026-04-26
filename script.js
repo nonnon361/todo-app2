@@ -57,3 +57,4 @@ function loadTasks() {
     document.getElementById("taskList").appendChild(li);
   });
 }
+loadTasks();
