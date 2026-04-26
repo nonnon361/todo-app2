@@ -5,4 +5,5 @@ button.addEventListener("click", () => {
   const li = document.createElement("li");
   li.textContent = input.value;
   list.appendChild(li);
-});input.value = "";
+});
+input.value = "";
