@@ -25,3 +25,7 @@ button {
 li:hover {
   background: #f0f0f0;
 }
+.dark {
+  background: #111;
+  color: white;
+}
