@@ -29,3 +29,7 @@ li:hover {
   background: #111;
   color: white;
 }
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
