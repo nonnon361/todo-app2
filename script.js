@@ -6,9 +6,11 @@ button.addEventListener("click", () => {
 
   const li = document.createElement("li");
   li.textContent = input.value;
-  li.addEventListener("click", () => {
-  li.style.textDecoration = "line-through";
-});
+
+  const delBtn = document.createElement("button");
+  delBtn.textContent = "X";
+
+  li.appendChild(delBtn);
   list.appendChild(li);
 
   input.value = "";
