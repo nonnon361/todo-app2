@@ -2,7 +2,10 @@ function saveTasks() {
   const items = [];
 
   document.querySelectorAll("li").forEach(li => {
-    items.push(li.textContent.replace("X", "").trim());
+    items.push({
+      text: li.childNodes[0].textContent,
+      done: li.classList.contains("done")
+    });
   });
 
   localStorage.setItem("tasks", JSON.stringify(items));
