@@ -33,3 +33,9 @@ li:hover {
   text-decoration: line-through;
   opacity: 0.6;
 }
+button {
+  cursor: pointer;
+  border: none;
+  background: #ddd;
+  border-radius: 5px;
+}
