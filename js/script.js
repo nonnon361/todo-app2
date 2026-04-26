@@ -23,7 +23,7 @@ const list = document.getElementById("taskList");
 button.addEventListener("click", () => {
   if (input.value === "") return;
 
-  const li = createTask(input.value);
+  const li = createTask(input.value, false, saveTasks, list);
 
   list.appendChild(li);
 
