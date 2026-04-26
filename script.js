@@ -15,3 +15,6 @@ button.addEventListener("click", () => {
 
   input.value = "";
 });
+delBtn.addEventListener("click", () => {
+  li.remove();
+});
